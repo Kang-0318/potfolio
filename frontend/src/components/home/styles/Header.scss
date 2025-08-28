@@ -7,12 +7,17 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        h4 {
+            font-size: clamp(1.8rem ,2.2vw, 2.4rem );
+        }
         .right-wrap {
             display: flex;
+            align-items: center;
             gap: 3rem;
             nav ul {
                 display: flex;
                 gap: 2rem;
+                font-size: 1.4rem;
             }
         }
     }
