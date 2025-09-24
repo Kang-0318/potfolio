@@ -1,16 +1,16 @@
 
-import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { ThemeProvider } from './context/ThemeContext'
+import { Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home"
 import AdminLogin from "./pages/AdminLogin"
 import AdminPost from "./pages/AdminPost"
-import Home from "./pages/Home"
 import Notfound from "./pages/Notfound"
 import AuthRedirectRoute from './routes/AuthRedirectRoute'
-import RequireAuth from './routes/RequireAuth'
+import RequireAuth from './routes/RequireAuth';
+import "./styles/main.scss"
 import "./styles/_themes.scss"
 import './styles/common.scss'
-import "./styles/main.scss"
+import { ThemeProvider } from './context/ThemeContext'
 function App() {
 
 
