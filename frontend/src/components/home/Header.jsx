@@ -23,14 +23,14 @@ const Header = () => {
   }, [])
 
   useEffect(()=>{
-    const onKey =(e)=> e.key=='Escape' && setMenuOpen(false)
+    const onKey=(e)=> e.key=='Escape' && setMenuOpen(false)
 
     document.addEventListener('keydown',onKey)
-    return ()=>document.removeEventListener('keydown',onKey)
+    return()=>document.removeEventListener('keydown',onKey)
   },[])
 
   return (
-    <header className={`${scrolled? "scroll":"" } ${menuOpen? "is-open":""} ` }>
+    <header className={`${scrolled? "scroll":"" }${menuOpen? "is-open":""}`}>
       <div className="inner">
         <h4>LOGO</h4>
         <div className="right-wrap">

@@ -1,46 +1,54 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose")
 
-const userSchema=new mongoose.Schema(
+const userSchema = new mongoose.Schema(
     {
-        username:{
-            type:String,
-            required:true,
-            trim:true,
-            minlength:2,
-            maxlength:30
+        username: {
+            type: String,
+            required: true,
+            trim: true,
+            minlength: 2,
+            maxlegth: 30
         },
-        password:{
-            type:String,
-            required:true,
+
+        password: {
+            type: String,
+            required: true,
             select:false
         },
-        isLoggedIn:{
-            type:Boolean,
+
+        isLoggedIn: {
+            type: Boolean,
             default:false
         },
-        isActive:{
-            type:Boolean,
-            default:true//수정
+
+        isActive: {
+            type: Boolean,
+            default:true
         },
-        failedLoginAttempts:{
-            type:Number,
+
+        failedLoginAttempts: {
+            type: Number,
             default:0
         },
-        lastLoginAttempt:{
-            type:Date,
+
+        lastLoginAttempt: {
+            type: Date,
         },
-        ipAdress:{
+
+        ipAddress: {
             type:String,
             trim:true
         },
-        createdAt:{
+
+        createdAt: {
             type:Date,
             default:Date.now
         }
-    },{
-        timestamps:true
-    }
+
+    }, {
+    timestamps: true
+}
 )
 
-const User =mongoose.model("User",userSchema)
-module.exports=User
+const User = mongoose.model("User", userSchema)
+module.exports = User
